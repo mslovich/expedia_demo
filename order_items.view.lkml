@@ -61,7 +61,7 @@ view: order_items {
 
   dimension: sale_price {
     type: number
-    sql: ${TABLE}.sale_price * ${my_conversion_rate_table.conversion_rate};;
+    sql: ${TABLE}.sale_price ;;
   }
 
   dimension_group: shipped {
