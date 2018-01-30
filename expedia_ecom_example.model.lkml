@@ -12,6 +12,12 @@ explore: order_items {
     sql_on: ${order_items.user_id} = ${users.id};;
   }
 
+  join: user_facts {
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${users.id}  = ${user_facts.user_id} ;;
+  }
+
   join: inventory_items {
     sql_on: ${order_items.inventory_item_id} = ${inventory_items.id} ;;
     relationship: one_to_one

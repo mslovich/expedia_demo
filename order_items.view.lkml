@@ -98,7 +98,12 @@ view: order_items {
     type: sum
     sql: ${sale_price} ;;
     value_format_name: usd
+  }
 
+  measure: min_order_date {
+    hidden: yes
+    type: min
+    sql: ${created_date} ;;
   }
 
 
